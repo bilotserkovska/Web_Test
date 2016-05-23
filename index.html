@@ -4,228 +4,241 @@
 	<title>Test</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, inItial-scale=-1">
-	<link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
-	<script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<header>
-		<section class="head-top">
+		<div class="head-top">
 			<div class="container">
 				<a class="logo" href="index.html">
-					<img src="images/logo.png">
+					<img src="images/logo.png" alt="logo">
 				</a>
 				<form action="#">
-					<input type="text">
-					<input type="submit" value="LOGIN or REGISTER">
+					<input type="text" class="form-control">
+					<input type="submit" value="">
+					<nav>
+						<a href="#">login</a>
+							<span>or</span>
+						<a href="#">register</a>
+					</nav>
 				</form>
 				<div style="clear:both"></div>
 			</div>
-		</section>
-		<section class="head-bottom">
-			<div class="container">
-				<nav class="header-menu">
-					<a class="scroll" href="#">home</a>
-					<a class="scroll" href="#information">products</a>
-					<a class="scroll" href="#about">about</a>
-					<a class="scroll" href="#pages">pages</a>
-					<a class="scroll" href="#blog">blog</a>
-					<a class="scroll" href="#contact">contact</a>
-					<li>
-						<a class="star" href="#"><span>30</span></a>
-						<a class="cart" href="#"><span>0</span></a>
-					</li>
-					<div style="clear:both"></div>
-				</nav>
-				<div class="menu-wrap">
-					<div class="burger-button">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<nav class="menu-button">
-						<a class="scroll" href="#pages">pages</a>
-						<a class="scroll" href="#blog">blog</a>
-						<a class="scroll" href="#contact">contact</a>
-					</nav>
-					<div style="clear:both"></div>
+		</div>
+		<div class="container">
+			<nav class="header-menu">
+				<a href="#">home</a>
+				<a href="#information">products</a>
+				<a href="#about">about</a>
+				<a href="#pages">pages</a>
+				<a href="#blog">blog</a>
+				<a href="#contact">contact</a>
+				<a class="right cart" href="#"><span>0</span></a>
+				<a class="right star" href="#"><span>30</span></a>
+				<div style="clear:both"></div>
+			</nav>
+			<div class="menu-wrap">
+				<div class="burger-button">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-			</div>			
-		</section>
+				<nav class="menu-button">
+					<a href="#pages">pages</a>
+					<a href="#blog">blog</a>
+					<a href="#contact">contact</a>
+				</nav>
+				<div style="clear:both"></div>
+			</div>
+		</div>
 	</header>
 	<main>
 		<section class="information" id="information">
-			<ul class="bxslider">
-			  <li>
-				  <div class="info-box info-box-xs">
-						<div class="price">$145,99</div>
-						<h1>
-							Pink Shoes<br>
-							2013 Collection
-						</h1>
-						<p>
-							Nunc non fermentum nunc. Sed ut ante<br>
-							eget leo tempor consequat sit amet eu orci.<br> 
-							Donec dignissim dolor eget..
-						</p>
-						<nav class="serv-list">
-							<li><a class="link-watch" href="#"></a></li>
-							<li><a class="link-star" href="#"></a></li>
-							<li><a class="link-out" href="#"></a></li>
-							<li><a class="link-cart" href="#"></a></li>
-						</nav>
-					</div>
-				</li>
-			  <li>
-			  	<div class="info-box">
-					<div class="price">$145,99</div>
-						<h1>
-							Anna Field<br>
-							2013 Collection
-						</h1>
-						<p>
-							Duis mollis, est non commodo luctus, <br>nisi erat porttitor ligula<br> 
-							Nulla vitae elit libero, a pharetra augue.    
-						</p>
-						<nav class="serv-list">
-							<li><a class="link-watch" href="#"></a></li>
-							<li><a class="link-star" href="#"></a></li>
-							<li><a class="link-out" href="#"></a></li>
-							<li><a class="link-cart" href="#"></a></li>
-						</nav>
-					</div>
-			  </li>
-			  <li>
-			  	<div class="info-box">
-					<div class="price">$145,99</div>
-						<h1>
-							Prada<br>
-							2013 Collection
-						</h1>
-						<p>
-							Donec sed odio dui. Nulla vitae elit<br> libero, a pharetra augue.<br> 
-							eget lacinia odio sem nec elit.
-						</p>
-						<nav class="serv-list">
-							<li class="li-serv"><a class="link-watch" href="#"></a></li>
-							<li class="li-serv"><a class="link-star" href="#"></a></li>
-							<li class="li-serv"><a class="link-out" href="#"></a></li>
-							<li class="li-serv"><a class="link-cart" href="#"></a></li>
-						</nav>
-					</div>
-			  </li>
-			  <li>
-			  	<div class="info-box">
-					<div class="price">$145,99</div>
-						<h1>
-							Casadei<br>
-							2013 Collection
-						</h1>
-						<p>
-							Nullam id dolor id nibh ultricies vehicula <br>ut id elit. Integer posuere erat a ante venenatis <br> 
-							dapibus posuere velit aliquet.
-						</p>
-						<nav class="serv-list">
-							<li><a class="link-watch" href="#"></a></li>
-							<li><a class="link-star" href="#"></a></li>
-							<li><a class="link-out" href="#"></a></li>
-							<li><a class="link-cart" href="#"></a></li>
-						</nav>
-					</div>
-			  </li>
-			  <li>
-			  	<div class="info-box">
-					<div class="price">$145,99</div>
-						<h1>
-							Mellow Yellow<br>
-							2013 Collection
-						</h1>
-						<p>
-							Duis mollis, est non commodo luctus,<br>
-							eget leo tempor consequat sit amet eu orci.<br> 
-							Nisi erat porttitor ligula
-						</p>
-						<nav class="serv-list">
-							<li><a class="link-watch" href="#"></a></li>
-							<li><a class="link-star" href="#"></a></li>
-							<li><a class="link-out" href="#"></a></li>
-							<li><a class="link-cart" href="#"></a></li>
-						</nav>
-					</div>
-			  </li>			  
-			</ul>
-		</section>
-		<section class="about-section" id="about">
-			<div class="container">
-				<nav>
-					<li>
-						<a class="sale-image" href="#"><img src="images/img01.jpg"></a>
-						<div class="sale">
-						  	on sale
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				<div class="container-wrap slider-container">
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				  </ol>
+				</div>
+				  <!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <div class="info-box">
+							<div class="price">$145,99</div>
+							<h1>
+								Pink Shoes<br>
+								2013 Collection
+							</h1>
+							<p>
+								Nunc non fermentum nunc. Sed ut ante<br>
+								eget leo tempor consequat sit amet eu orci.<br> 
+								Donec dignissim dolor eget..
+							</p>
+							<ul class="serv-list">
+								<li><a class="link-watch" href="#"></a></li>
+								<li><a class="link-star" href="#"></a></li>
+								<li><a class="link-out" href="#"></a></li>
+								<li><a class="link-cart" href="#"></a></li>
+							</ul>
 						</div>
-					</li>
-					<li>
-						<a class="sale-image" href="#"><img src="images/img02.jpg"></a>
-						<div class="sale">
-						  	special offers
+				    </div>
+				    <div class="item">
+				        <div class="info-box">
+							<div class="price">$145,99</div>
+								<h1>
+									Anna Field<br>
+									2013 Collection
+								</h1>
+								<p>
+									Duis mollis, est non commodo luctus, <br>nisi erat porttitor ligula<br> 
+									Nulla vitae elit libero, a pharetra augue.    
+								</p>
+							<ul class="serv-list">
+								<li><a class="link-watch" href="#"></a></li>
+								<li><a class="link-star" href="#"></a></li>
+								<li><a class="link-out" href="#"></a></li>
+								<li><a class="link-cart" href="#"></a></li>
+							</ul>
 						</div>
-					</li>
-					<li>
-						<a class="sale-image" href="#"><img src="images/img03.jpg"></a>
-						<div class="sale">
-						  	must have
+				    </div>
+				    <div class="item">
+				      	<div class="info-box">
+							<div class="price">$145,99</div>
+							<h1>
+								Prada<br>
+								2013 Collection
+							</h1>
+							<p>
+								Donec sed odio dui. Nulla vitae elit<br> libero, a pharetra augue.<br> 
+								eget lacinia odio sem nec elit.
+							</p>
+							<ul class="serv-list">
+								<li><a class="link-watch" href="#"></a></li>
+								<li><a class="link-star" href="#"></a></li>
+								<li><a class="link-out" href="#"></a></li>
+								<li><a class="link-cart" href="#"></a></li>
+							</ul>
 						</div>
-					</li>
-				</nav>
+				    </div>
+				    <div class="item">
+				      	<div class="info-box">
+							<div class="price">$145,99</div>
+							<h1>
+								Casadei<br>
+								2013 Collection
+							</h1>
+							<p>
+								Nullam id dolor id nibh ultricies vehicula <br>ut id elit. Integer posuere erat a ante venenatis <br> 
+								dapibus posuere velit aliquet.
+							</p>
+							<ul class="serv-list">
+								<li><a class="link-watch" href="#"></a></li>
+								<li><a class="link-star" href="#"></a></li>
+								<li><a class="link-out" href="#"></a></li>
+								<li><a class="link-cart" href="#"></a></li>
+							</ul>
+						</div>
+				    </div>
+				    <div class="item">
+				      	<div class="info-box">
+							<div class="price">$145,99</div>
+							<h1>
+								Mellow Yellow<br>
+								2013 Collection
+							</h1>
+							<p>
+								Duis mollis, est non commodo luctus,<br>
+								eget leo tempor consequat sit amet eu orci.<br> 
+								Nisi erat porttitor ligula
+							</p>
+							<ul class="serv-list">
+								<li><a class="link-watch" href="#"></a></li>
+								<li><a class="link-star" href="#"></a></li>
+								<li><a class="link-out" href="#"></a></li>
+								<li><a class="link-cart" href="#"></a></li>
+							</ul>
+						</div>
+				    </div>
+				  </div>
 			</div>
-
+			<div class="about-section">
+				<div class="container">
+					<ul>
+						<li>
+							<a class="sale-image" href="#"><img src="images/img01.jpg" alt="image"></a>
+							<div class="sale">
+							  	on sale
+							</div>
+						</li>
+						<li>
+							<a class="sale-image" href="#"><img src="images/img02.jpg" alt="image"></a>
+							<div class="sale">
+							  	special offers
+							</div>
+						</li>
+						<li>
+							<a class="sale-image" href="#"><img src="images/img03.jpg" alt="image"></a>
+							<div class="sale">
+							  	must have
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</section>
-		<section class="products" id="pages">
+		<section class="products">
 			<div class="container">
 				<h2>New arrivals on FooseShoes</h2>
 				<button>show all</button>
 				<div class="col-wrapper">
 					<div class="col left-col">
-						<img src="images/image01.jpg">
+						<img src="images/image01.jpg" alt="image">
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
 							<span>Even&amp;Odd</span>
-							<nav class="serv-list">
+							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
 								<li><a class="link-star" href="#"></a></li>
 								<li><a class="link-out" href="#"></a></li>
 								<li><a class="link-cart" href="#"></a></li>
-							</nav>
+							</ul>
 						</div>
 					</div>
 					<div class="col center-col">
-						<img src="images/image02.jpg">
+						<img src="images/image02.jpg" alt="image">
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
 							<div class="sticker">on sale!</div>
 							<span>Even&amp;Odd</span>
-							<nav class="serv-list">
+							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
 								<li><a class="link-star" href="#"></a></li>
 								<li><a class="link-out" href="#"></a></li>
 								<li><a class="link-cart" href="#"></a></li>
-							</nav>
+							</ul>
 						</div>
 					</div>
 					<div class="col right-col">
-						<img src="images/image03.jpg">
+						<img src="images/image03.jpg" alt="image">
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
 							<span>Buffalo Decollete&#769;</span>
-							<nav class="serv-list">
+							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
 								<li><a class="link-star" href="#"></a></li>
 								<li><a class="link-out" href="#"></a></li>
 								<li><a class="link-cart" href="#"></a></li>
-							</nav>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -233,47 +246,47 @@
 				<button>show all</button>
 				<div class="col-wrapper">
 					<div class="col left-col">
-						<img src="images/image04.jpg">
+						<img src="images/image04.jpg" alt="image">
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
 							<span>Even&amp;Odd</span>
-							<nav class="serv-list">
+							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
 								<li><a class="link-star" href="#"></a></li>
 								<li><a class="link-out" href="#"></a></li>
 								<li><a class="link-cart" href="#"></a></li>
-							</nav>
+							</ul>
 						</div>
 					</div>
 					<div class="col center-col">
-						<img src="images/image05.jpg">
+						<img src="images/image05.jpg" alt="image">
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
 							<span>Even&amp;Odd</span>
-							<nav class="serv-list">
+							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
 								<li><a class="link-star" href="#"></a></li>
 								<li><a class="link-out" href="#"></a></li>
 								<li><a class="link-cart" href="#"></a></li>
-							</nav>
+							</ul>
 						</div>
 					</div>
 					<div class="col right-col">
-						<img src="images/image06.jpg">
+						<img src="images/image06.jpg" alt="image">
 						<div class="col-bottom">
 							<div class="price">$145,99</div>
 							<div class="sticker stock">Out of stock!</div>
 							<span>Buffalo Decollete&#769;</span>
-							<nav class="serv-list">
+							<ul class="serv-list">
 								<li><a class="link-watch" href="#"></a></li>
 								<li><a class="link-star" href="#"></a></li>
 								<li><a class="link-out" href="#"></a></li>
 								<li><a class="link-cart" href="#"></a></li>
-							</nav>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="advertising-box" id="blog">
+				<div class="advertising-box">
 					<div class="adv-col adv-col-sm">
 						<h3>Free Shipping</h3>
 						<p>
@@ -282,9 +295,12 @@
 					</div>
 					<div class="adv-col adv-col-sm">
 						<h3>Testimonials</h3>
-						<p>
+						<blockquote>
 							vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]
-						</p>
+						</blockquote>
+						<!-- <p>
+							vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]
+						</p> -->
 						<span>John Doe</span>
 					</div>
 					<div class="adv-col adv-col-m">
@@ -292,7 +308,7 @@
 						<div class="col-m-content">
 							<div class="data"><p>apr<br>01</p></div>
 							<div class="blog">
-								<h3>Nice &amp; clean. The best for you blog!</h3>
+								<a href="#">Nice &amp; clean. The best for you blog!</a>
 								<p>
 									Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class 
 								</p>
@@ -301,7 +317,7 @@
 						<div class="col-m-content">
 							<div class="data"><p>apr<br>01</p></div>
 							<div class="blog">
-								<h3>What an Ecommerce theme!</h3>
+								<a href="#">What an Ecommerce theme!</a>
 								<p>
 									vulputate vel nibh. Class aptent taciti sociosqu ad litora 
 								</p>
@@ -325,41 +341,42 @@
 						<h3>TWITTER WIDGET</h3>
 						<p>
 							<a href="#">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href="#">@treemelody</a>
+							<time datetime="2016-05-09">19 days ago</time>
 						</p>
-						<p class="time">19 days ago</p>
+						
 						<p>
 							<a href="#">@roymarvelous</a> You can seek a refund through TF if it is not as advertised - but it is :)
-						</p>
-						<p class="time">21 days ago</p>
+							<time datetime="2016-05-16">21 days ago</time>
+						</p>						
 					</div>
 					<div class="wid-right-col">
 						<h3>FLICKR WIDGET</h3>
 						<nav>
-							<a href="#"><img src="images/wid01.jpg"></a>
-							<a href="#"><img src="images/wid02.jpg"></a>
-							<a href="#"><img src="images/wid03.jpg"></a>
-							<a href="#"><img src="images/wid04.jpg"></a>
-							<a href="#"><img src="images/wid05.jpg"></a>
-							<a href="#"><img src="images/wid06.jpg"></a>
+							<a href="#"><img src="images/wid01.jpg" alt="image"></a>
+							<a href="#"><img src="images/wid02.jpg" alt="image"></a>
+							<a href="#"><img src="images/wid03.jpg" alt="image"></a>
+							<a href="#"><img src="images/wid04.jpg" alt="image"></a>
+							<a href="#"><img src="images/wid05.jpg" alt="image"></a>
+							<a href="#"><img src="images/wid06.jpg" alt="image"></a>
 						</nav>
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="contacts" id="contact">
-			<div class="container">
-				<form action="#">
-					<input type="text" placeholder="Enter email for newsletter">
-					<input type="submit" value="">
-				</form>
-				<nav class="social">
-					<a class="fb" href="#"></a>
-					<a class="tw" href="#"></a>
-					<a class="google" href="#"></a>
-					<a class="ld" href="#"></a>
-					<a class="fl" href="#"></a>
-				</nav>
-				<div style="clear:both"></div>
+			<div class="contacts">
+				<div class="container">
+					<form action="#">
+						<input type="text" placeholder="Enter email for newsletter" class="form-control">
+						<input type="submit" value="">
+					</form>
+					<nav class="social">
+						<a class="fb" href="#"></a>
+						<a class="tw" href="#"></a>
+						<a class="google" href="#"></a>
+						<a class="ld" href="#"></a>
+						<a class="fl" href="#"></a>
+					</nav>
+					<div style="clear:both"></div>
+				</div>
 			</div>
 		</section>
 	</main>

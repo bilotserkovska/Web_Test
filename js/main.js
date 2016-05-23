@@ -1,9 +1,5 @@
 $(document).ready(function(){
-$('.bxslider').bxSlider({
-	  mode: 'fade',
-	  captions: true,
-	  auto: true
-	});
+$('.carousel').carousel()
    	$('a.scroll, .burger-button').click(function(){
    		if($(this).hasClass('burger-button')) {
    			if($('.menu-button').hasClass('menu-button-active')) {

@@ -57,6 +57,9 @@ a:focus{
 	outline: none !important;
 	text-decoration: none;
 }
+a:hover{
+	text-decoration: none;
+}
 h1{
 	font-size: 40px;
 }
@@ -72,15 +75,19 @@ p{
 span{
 	font-family: Aller_Rg;
 }
+header{
+	background: #fff;
+}
 header a{
-	-webkit-transition: opacity .3s linear;
-	-moz-transition: opacity .3s linear;
-	-o-transition: opacity .3s linear;
-	transition: opacity .3s linear;
+	-webkit-transition: color .3s linear;
+	-moz-transition: color .3s linear;
+	-o-transition: color .3s linear;
+	transition: color .3s linear;
 }
 header a:hover{
-	opacity: .6;
+	color: #57c5a0;
 }
+
 .container{
 	max-width: 960px;
 	margin: 0 auto;
@@ -89,53 +96,82 @@ header a:hover{
 	background: #242424;
 }
 .logo{
-	padding: 8px 7px;
+	padding: 10px 7px;
 	display: inline-block;
 }
-.head-top form{
+header form{
 	display: inline-block;
     float: right;
     font-size: 0;
-    margin: 0 10px 0 0;
 }
-.head-top fieldset{
+header fieldset{
 	border: none;
 }
-.head-top input{
+header input{
 	border: none;
 	background: inherit;
 	outline: none !important;
 }
-.head-top input[type="text"]{
-	padding: 10px 15px 16px 10px;
-	color: #7e7e7e;
-	font-family: OpenSansBold;
-	background: url(../images/search.png) no-repeat 88% 40%
+header input[type="text"]{
+    padding: 6px 12px;
+    color: #7e7e7e;
+    font-family: OpenSansBold;
+    box-shadow: none !important;
+    background: inherit !important;
+    display: inline-block;
+    width: 54%;
+    border: none;
 }
-.head-top input[type="submit"]{
+header input[type="submit"]{
 	color: #7e7e7e;
-	font-family: Aller_Rg;
-	font-size: 11px;
-	border-left: 1px solid #7e7e7e;
-	border-right: 1px solid #7e7e7e;
-	padding: 10px 26px 16px 18px;
-	cursor: pointer;
-	background: #242424;
-	-webkit-transition: color .3s linear;
+    font-family: Aller_Rg;
+    font-size: 12px;
+    padding: 5px 8px;
+    cursor: pointer;
+    background: url(../images/search.png) no-repeat 50%;
+    -webkit-transition: opacity .3s linear;
+	-moz-transition: opacity .3s linear;
+	-o-transition: opacity .3s linear;
+	transition: opacity .3s linear;
+
+}
+header input[type="submit"]:hover{
+	opacity: .8;
+}
+header form a{
+    border: none !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    padding: 0px 12px 0px 12px !important;
+    -webkit-transition: color .3s linear;
 	-moz-transition: color .3s linear;
 	-o-transition: color .3s linear;
 	transition: color .3s linear;
 }
-.head-top input[type="submit"]:hover{
+header form a:hover{
+	color: rgba(255, 255, 255, .8) !important;
+}
+header form nav{
+	display: inline-block;
+    border-right: 1px solid #7e7e7e;
+    border-left: 1px solid #7e7e7e;
+    padding: 15px  0 12px 0;
+
+}
+header form span{
+	display: inline-block;
+	font-size: 11px !important;
 	color: #fff;
+	text-transform: lowercase;
 }
 .head-bottom{
 	background: #fff;
 }
-.head-bottom nav{
+header nav{
 	margin: 0 9px 0 8px;
 }
-.head-bottom nav a{
+header nav a{
 	font-family: Aller_Rg;
 	font-size: 16px;
 	text-transform: capitalize;
@@ -144,24 +180,28 @@ header a:hover{
 	padding: 22px 21px 22px 21px;
 	display: inline-block;
 }
-.head-bottom nav a:first-child{
+header nav a:first-child{
 	border-left: 1px solid #eeeeee;
 }
-.head-bottom nav li{
+header nav li{
 	display: inline-block;
 	float: right;
 }
-.head-bottom .star{
+header .star{
 	background: url(../images/star.png) no-repeat 21px 50%;
     padding-left: 45px;
     padding-right: 24px;
+    border-left: 1px solid #eeeeee;
 }
-.head-bottom .cart{
+header .cart{
     background: url(../images/cart.png) no-repeat 18px 50%;
     padding-left: 43px;
     padding-right: 25px;
 }
-.head-bottom nav a span{
+.right{
+	float: right;
+}
+header nav a span{
 	font-size: 12px;
 	font-family: Aller_Bd;
 	border-radius: 5px;
@@ -175,12 +215,12 @@ header a:hover{
 	color: #fff;
 	line-height: 20px;
 }
-.head-bottom nav .cart span{
+header nav .cart span{
 	background: #57c5a0;
 }
 .information{
 	padding: 0 0 23px 0;
-	margin: -4px 0 0 0;
+	overflow: hidden;
 }
 .info-box {
     padding: 70px 0px;
@@ -200,6 +240,8 @@ header a:hover{
     margin: 21px 0 12px -2px;
     font-family: Aller_Lt;
     line-height: 24px;
+    height: 72px;
+    overflow: hidden;
 }
 .information .price{
 	width: 60px;
@@ -253,129 +295,153 @@ header a:hover{
     background-position: -113px -16px !important;
 }
 /*_____________________________________________________*/
-.bx-wrapper{
+
+.back-img{
+	width: 100%;
+	position: relative;
+}
+.slider-container{
+	max-width: 980px !important;
+}
+.information{
 	min-width: 100%;
-	overflow: hidden;
-	margin-bottom: 0;
 }
-.bx-wrapper .bx-viewport{
-	height: 551px !important;
-    background: #2e2e2e;
-    box-shadow: none;
-    border: none;
-    left: 0;
+.carousel-example-generic{
+	  min-width: 100%;
 }
-.bx-wrapper .bx-viewport li{
-	background: url(../images/1_Home.jpg)no-repeat;
-	background-size: 100% 100%;
-	height: 461px;
+.carousel-inner {
+    padding-bottom: 90px;
+    background-color: #2e2e2e !important;  
 }
-.bx-wrapper .bx-pager .bx-pager-item{
-	width: 19%;
-    border-right: 1px solid #2e2e2e;
-    padding: 0 4px;
-}
-.bx-wrapper .bx-pager{
-	position: absolute;
-    bottom: 74px;
-    width: 100%;
-    max-width: 960px;
-    margin: auto;
+.carousel-indicators{
+	min-width: 970px;
+    padding: 0;
+    margin: 0 auto;
     left: 0;
     right: 0;
-    line-height: 3px;
-    border: 2px solid black;
     background: #000000;
-    padding-top: 0px;
-    text-align: left;
+    height: 15px;
+    bottom: 70px;
 }
-.bx-wrapper .bx-controls-direction{
-	display: none;
+.carousel-indicators li{
+	width: 19%;
+	position: relative;
 }
-.bx-wrapper .bx-pager .bx-pager-item:last-child{
-	border-right: none;
+.carousel-inner>.item{
+	background: url(../images/1_Home.jpg)no-repeat;
+    background-size: 100% 100% !important;
+    padding: 0 0 16px 0;
 }
-.bx-wrapper .bx-pager.bx-default-pager a{
+.carousel-indicators .active{
+	width: 19%;
+}
+.button-slide p{
+	font-family: Aler_Rg;
+	font-size: 18px;
+	color: #fff;
+}
+.button-slide span{
+	font-family: Aler_Rg;
+	font-size: 12px;
+}
+.button-slide{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.carousel-indicators .active:before{
+	color: #fff;
+}
+.carousel-indicators li:before{
+	position: absolute;
+    top: 19px;
+    display: inline-block;
+    color: #979797;
+    font-family: Aller_Rg;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+.carousel-indicators li:after{
+	position: absolute;
+    top: 44px;
+    display: inline-block;
+    color: #979797;
+    font-family: Aller_Rg;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}
+.carousel-indicators li:first-child:before{
+    content: 'Pink Shoes';
+    left: 499px;    
+}
+.carousel-indicators li:first-child:after{
+	content: 'Now af $145,99';    
+    left: 497px;
+}
+
+.carousel-indicators li:nth-child(3n+2):before{
+	content: 'Anna Field';
+	left: 495px;
+}
+.carousel-indicators li:nth-child(3n+2):after{
+	content: 'Limited Edition';
+	left: 495px;
+}
+.carousel-indicators li:nth-child(5n-2):before{
+	content: 'Prada';
+	left: 500px;
+}
+.carousel-indicators li:nth-child(5n-2):after{
+	content: 'Summer is coming';
+	left: 500px;
+}
+.carousel-indicators li:nth-child(4):before{
+	content: 'Casadei';
+	left: 500px;
+}
+.carousel-indicators li:nth-child(4):after{
+	content: 'All Colors avaiable';
+	left: 500px;
+}
+.carousel-indicators li:nth-child(5):before{
+	content: 'Mellow Yellow';
+	left: 495px;
+}
+.carousel-indicators li:nth-child(5):after{
+	content: 'Free delivery';
+	left: 495px;
+}
+.carousel-indicators li{
+	height: 12px;
+	border: 2px solid #000000;
 	border-radius: 0px;
 	background: #000000;
-	height: 5px;
-	width: 100%;
-    margin: 0;
+	border-left: 1px solid #2e2e2e;
 }
-.bx-wrapper .bx-pager.bx-default-pager a.active{
-	background: #57c5a0;
+.carousel-indicators .active{
+	height: 12px;
+	border: 2px solid #000000;
+	border-radius: 0px;
+	background: #57c5a0; 
 }
-.bx-wrapper .bx-pager .bx-pager-item:before{
-	position: absolute;
-    color: #7b7b7b;
-    top: 26px;
-    text-align: center;
-    left: 55px;
-    font-size: 18px;
-	font-family: Aller_Rg;
-}
-.bx-wrapper .bx-pager .bx-pager-item:after{
-	position: absolute;
-    color: #7b7b7b;
-    top: 50px;
-    text-align: center;
-    left: 55px;
-    font-size: 12px;
-	font-family: Aller_Rg;
-}
-.bx-wrapper .bx-pager .bx-pager-item:first-child:before{
-	content: 'Pink Shoes';
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(1):after{
-	content: 'Now af $145,99';
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(3n+2):before{
-	content: 'Anna Field';
-	left: 244px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(3n+2):after{
-	content: 'Limited Edition';
-	left: 246px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(5n-2):before{
-	content: 'Prada';
-	left: 460px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(5n-2):after{
-	content: 'Summer is coming';
-	left: 435px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(4):before{
-	content: 'Casadei';
-	left: 632px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(4):after{
-	content: 'All Colors avaiable';
-	left: 613px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(5):before{
-	content: 'Mellow Yellow';
-	left: 805px;
-}
-.bx-wrapper .bx-pager .bx-pager-item:nth-child(5):after{
-	content: 'Free delivery';
-	left: 830px;
-}
+
 /*_______________________________________________________*/
 .about-section{
 	padding: 0 0 29px 0;
 }
-.about-section nav li{
+.about-section ul li{
 	display: inline-block;
 	width: 30%;
 	margin: 1px 31px 0px 0px;
 	text-align: center;
 	position: relative;
 }
-.about-section nav{
+.about-section ul{
 	text-align: center;
 }
-.about-section nav li a{
+.about-section ul li a{
 	width: 100%;
 	display: inline-block;
 	-webkit-transition:opacity .3s linear;
@@ -383,13 +449,13 @@ header a:hover{
 	-o-transition:opacity .3s linear;
 	transition:opacity .3s linear;
 }
-.about-section nav li a:hover{
+.about-section ul li a:hover{
 	opacity: .8;
 }
-.about-section nav li a img{
+.about-section ul li a img{
 	width: 100%;
 }
-.about-section nav li:last-child{
+.about-section ul li:last-child{
 	margin-right: 0;
 }
 .sale {
@@ -403,7 +469,7 @@ header a:hover{
     margin: auto;
     position: absolute;
     left: 0;
-    top: 62px;
+    top: 50px;
     right: 0;
     cursor: pointer;
 }
@@ -430,13 +496,13 @@ header a:hover{
     color: #bcb5a7;
     outline: none !important;
     cursor: pointer;
-    -webkit-transition: color .3s linear;
-    -moz-transition: color .3s linear;
-    -o-transition: color .3s linear;
-    transition: color .3s linear;
+    -webkit-transition: background .3s linear;
+    -moz-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    transition: background .3s linear;
 }
 .products button:hover{
-	color: #fff;
+	background: #fff;
 }
 .col{
     display: inline-block;
@@ -450,13 +516,17 @@ header a:hover{
 .col-bottom span{
 	display: inline-block;
     padding: 15px 0;
-    transform: opacity .3s linear;	
+    -webkit-transition: opacity .3s linear;	
+    -moz-transition: opacity .3s linear;	
+    -o-transition: opacity .3s linear;	
+    transition: opacity .3s linear;	
+
 }
 .col-bottom{
 	position: relative;
 	background: #fff;
     text-align: center;
-    margin: 0px 0 0 0;
+    margin: 1px 0 0 0;
     cursor: pointer;
     height: 47px;
 }
@@ -467,7 +537,7 @@ header a:hover{
 }
 .products .col .sticker{
     position: absolute;
-    bottom: 204px;
+    bottom: 195px;
     left: 221px;
     background: #000000;
     line-height: 60px;
@@ -481,18 +551,18 @@ header a:hover{
 	background: #f27e4b;
     line-height: normal;
     padding: 15px 0 0 0;
-    height: 52px;
-    bottom: 201px;
-    left: 222px;
+    height: 64px;
+    bottom: 195px;
+    left: 220px;
     width: 68px;
 }
 .products .serv-list{
 	display: none;
 	opacity: 0;
-    -webkit-transform: opacity .3s linear;
-    -moz-transform: opacity .3s linear;
-    -o-transform: opacity .3s linear;
-    transform: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+    -moz-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
+    transition: opacity .3s linear;
 }
 .col-bottom:hover span{
 	opacity: 0;
@@ -508,7 +578,7 @@ header a:hover{
 	margin: 0 0 0 -7px;
 }
 .serv-list li {
-    height: 41px;
+    /*height: 41px;*/
     margin: 5px 0px;
 }
 .advertising-box{
@@ -521,13 +591,13 @@ header a:hover{
     display: inline-block;
     vertical-align: top;
     background: #dfdbd4;
-    height: 154px;
+    height: 187px;
     overflow: hidden;
-    margin: 0 23px 23px 0;
+    margin: 0 28px 23px 0;
     padding: 31px 15px 0 14px;
 }
 .adv-col-sm{
-	width: 20%;
+	width: 24%;
 }
 .adv-col-m{
 	width: 45%;
@@ -546,11 +616,20 @@ header a:hover{
 	color: #242424;
 	line-height: 15px;
 }
+blockquote{
+	font-size: 12px;
+	color: #242424;
+	line-height: 15px;
+	padding: 0;
+    border: none;
+	font-family: Aller_Rg;
+	margin: 0;
+}
 .adv-col span{
 	font-size: 12px;
 	font-family: Aller_It;
 	display: inline-block;
-    margin: 10px 0px 0 -6px;
+    margin: 8px 0px 0 -6px;
 }
 .adv-col span:before{
 	display: inline-block;
@@ -569,9 +648,12 @@ header a:hover{
     padding: 0 0 0px 10px;
     margin: 0;
 }
-.blog h3{
+.blog a{
 	margin: 0 0 4px 0 !important;
     text-transform: capitalize;
+    font-family: Aller_Bd;
+	font-size: 14px;
+	color: #000000;
 }
 .data{
 	width: 37px;
@@ -597,6 +679,7 @@ header a:hover{
 .wid-col-wrap h3 {
 	font-family: Aller_Rg;
 	color: #5a5a5a;
+	text-transform: uppercase;
 }
 .wid-col-wrap div p{
 	font-family: Aller_It;
@@ -604,6 +687,13 @@ header a:hover{
 	color: #5b5b5b;
 	margin: 21px 0px 0 0;
     line-height: 17px;
+}
+time{
+    font-family: Aller_It;
+    font-size: 12px;
+    color: #5b5b5b;
+    margin: 5px 0px 0 0;
+    display: block;
 }
 .wid-col-wrap div{
     display: inline-block;
@@ -638,6 +728,7 @@ header a:hover{
 .contacts{
 	border-top: 1px solid black;
 	padding: 37px 0 42px 0;
+	margin: 37px 0 0 0;
 }
 .contacts form{
 	font-size: 0;
@@ -657,6 +748,10 @@ header a:hover{
 	border: none !important;
 	width: 188px;
 	color: #7d7d7d;
+	display: inline-block;
+    border-radius: 0;
+    font-size: 12px;
+    box-shadow: none !important;
 }
 ::-webkit-input-placeholder {color:#7d7d7d;}
 ::-moz-placeholder          {color:#7d7d7d;}
@@ -664,8 +759,8 @@ header a:hover{
 :-ms-input-placeholder      {color:#7d7d7d;}
 
 .contacts input[type="submit"]{
-	width: 35px;
-	height: 35px;
+	width: 34px;
+	height: 34px;
 	background: url(../images/button.png) no-repeat 50%;
 	background-color: #7d7d7d !important;
 	cursor: pointer;
@@ -760,7 +855,7 @@ footer{
 	
 }
 @media (max-width: 991px){
-	.head-bottom nav a{
+	header nav a{
 		padding: 22px 15px 22px 15px;
 	}
 	.information {
@@ -788,19 +883,13 @@ footer{
 		text-align: center;
 		padding-bottom: 20px;
 	}
-	.products h2{
-		display: block;
-		text-align: center;
-	}
-	.products button{
-		float: none;
-		margin-top: 0;
-	}
 	.products .col .sticker {
-	    bottom: 205px;
+	    bottom: 143px;
+	    left: 148px;
 	}
 	.products .col .stock {
-	    bottom: 203px !important;
+	    bottom: 142px !important;
+	    left: 148px;
 	}
 	.adv-col{
 		width: 90%;
@@ -831,9 +920,54 @@ footer{
 		text-align: center;
 	}
 	.col {
-	    width: 300px;
-	    display: block;
-	    margin: 30px auto;
+	    width: 30%;
+	    display: inline-block;
+	    margin: 30px 5px;
+	}
+	.products .col .price{
+		left: 0;
+		width: 60px;
+		height: 60px;
+	}
+	.products .serv-list{
+		margin: 0 0 0 0 !important;
+		padding: 10px 0 0 0;
+	}
+	.col-bottom .serv-list li {
+	    width: 20px;
+	    height: 20px !important;
+	    margin: 5px;
+	}
+	.col-bottom .serv-list a {
+	    width: 20px;
+	    height: 20px;
+	}
+	.col-bottom .link-watch {
+	    background-position: 1px 3px !important;
+	}
+	.col-bottom .link-watch:hover {
+	    background-position: 1px -27px !important;
+	}
+	.col-bottom .link-star {
+	    background-position: -38px 3px !important;
+	}
+	.col-bottom .link-star:hover {
+	    background-position: -38px -27px !important;
+	}
+	.col-bottom .link-out {
+	    background-position: -80px 3px !important;
+	}
+	.col-bottom .link-out:hover {
+	    background-position: -80px -27px !important;
+	}
+	.col-bottom .link-cart {
+	    background-position: -125px 3px !important;
+	}
+	.col-bottom .link-cart:hover {
+	    background-position: -125px -27px !important;
+	}
+	.col-bottom span {
+	    padding: 15px 0 15px 45px;
 	}
 	.wid-right-col nav a{
 		width: 29%;
