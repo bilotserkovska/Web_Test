@@ -298,7 +298,8 @@ header nav .cart span{
 }
 /*_____________________________________________________*/
 .carousel-inner>.item>img{
-	min-width: 100%;
+    min-width: 100%;
+    max-height: 460px !important;
 }
 .carousel-caption{
 	top:11%;
@@ -837,8 +838,6 @@ footer{
 	.carousel-caption{
 		top: 0%;
 	}
-
-	
 }
 @media (max-width: 991px){
 	.information .price {
