@@ -838,6 +838,9 @@ footer{
 	.carousel-caption{
 		top: 0%;
 	}
+	.carousel-inner > .item > img {
+	    max-height: 321px !important;
+	}
 }
 @media (max-width: 991px){
 	.information .price {
@@ -856,6 +859,9 @@ footer{
 	    line-height: 18px;
 	    height: 74px;
 	    font-size: 15px;
+	}
+	.carousel-inner > .item > img {
+	    max-height: 247px !important;
 	}
 	.carousel-caption {
 	    padding: 15px 0;
